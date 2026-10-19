@@ -39,10 +39,8 @@ class CampgroundFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Change this statement to store the view in a variable instead of a return statement
         val view = inflater.inflate(R.layout.fragment_campground, container, false)
 
-        // Add these configurations for the recyclerView and to configure the adapter
         val layoutManager = LinearLayoutManager(context)
         campgroundsRecyclerView = view.findViewById(R.id.campground_recycler_view)
         campgroundsRecyclerView.layoutManager = layoutManager
@@ -52,7 +50,6 @@ class CampgroundFragment : Fragment() {
 
         fetchCampgrounds()
 
-        // Update the return statement to return the inflated view from above
         return view
     }
 
